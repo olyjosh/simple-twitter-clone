@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Home from "./components/Home.js";
+import Home from "./pages/home/home";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
     faSearch,
