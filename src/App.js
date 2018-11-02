@@ -1,28 +1,32 @@
-import React, { Component } from 'react';
-import logo from './images/logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Home from "./components/Home.js";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+    faSearch,
+    faCoffee,
+    faCircle,
+    faUserFriends,
+    faComment,
+    faBolt
+} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/fontawesome-free-brands";
+import "./App.css";
+library.add(faSearch);
+library.add(faCoffee);
+library.add(faLinkedin);
+library.add(faComment);
+library.add(faCircle);
+library.add(faUserFriends);
+library.add(faBolt);
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Home />
+            </div>
+        );
+    }
 }
 
 export default App;
