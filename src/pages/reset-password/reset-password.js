@@ -14,7 +14,11 @@ class resetPasswordComponent extends PureComponent {
           <div className="TopNav">
             <div className="TopNav--container u-cf">
               <div class="Icon--logo u-pullLeft">
-                <img src={require("../../images/twitter.png")} alt="twitter" />
+                <img
+                  src={require("../../images/twitter.png")}
+                  alt="twitter"
+                  onClick={() => this.props.history.goBack()}
+                />
               </div>
               <div className="TopNav-title u-pullLeft">
                 <strong>Password Reset</strong>

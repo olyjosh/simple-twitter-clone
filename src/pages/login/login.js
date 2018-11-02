@@ -114,7 +114,12 @@ class loginComponent extends PureComponent {
                             />
                             Remember me
                             <span className="separator"> · </span>
-                            <a className="forgot" onClick="">
+                            <a
+                              className="forgot"
+                              onClick={() =>
+                                this.props.history.push("reset-password")
+                              }
+                            >
                               Forgot password?
                             </a>
                           </label>
