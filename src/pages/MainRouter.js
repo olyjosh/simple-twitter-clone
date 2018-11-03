@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from "./login/login";
 import App from "../App";
 import ResetPassword from "./reset-password/reset-password";
-const Main = () => (
+const MainRouter = () => (
   <main>
     <Switch>
       <Route exact path="/" component={App} />
@@ -13,4 +13,4 @@ const Main = () => (
   </main>
 );
 
-export default Main;
+export default MainRouter;

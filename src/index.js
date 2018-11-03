@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 //import App from './App';
 import { BrowserRouter } from "react-router-dom";
-import Main from "./pages/Main";
+import MainRouter from "./pages/MainRouter";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Main />
+    <MainRouter />
   </BrowserRouter>,
   document.getElementById("root")
 );
