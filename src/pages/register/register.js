@@ -107,7 +107,7 @@ class Register extends Component {
 
                 <FormGroup>
                   <Col smOffset={2} sm={10}>
-                    <Button type="submit">Sign in</Button>
+                    <Button type="submit">Sign Up</Button>
                   </Col>
                 </FormGroup>
               </Form>
