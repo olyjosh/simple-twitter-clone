@@ -404,18 +404,18 @@ class profilemainmenuComponent extends PureComponent {
                                 <span class="Icon Icon--add Icon--medium" />
                               </button>
                             </span>
-                            <button
-                              class="tweet-action disabled EdgeButton EdgeButton--primary js-tweet-btn"
-                              type="button"
-                              disabled=""
-                            >
-                              <span class="button-text tweeting-text">
-                                Tweet
-                              </span>
-                              <span class="button-text replying-text">
-                                Reply
-                              </span>
-                            </button>
+                            <div class="ProfilePrefilledTweet-tweetBtn Arrange-sizeFit">
+                              <button
+                                class="tweet-action EdgeButton EdgeButton--primary js-tweet-btn"
+                                type="button"
+                              >
+                                <span class="button-text tweeting-text">
+                                  Tweet
+                                </span>
+                              </button>
+
+                              <span class="ProfilePrefilledTweet-spinner Spinner Spinner--size14" />
+                            </div>
                           </div>
                         </div>
                         <div>

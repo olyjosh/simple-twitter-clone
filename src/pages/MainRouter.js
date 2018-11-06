@@ -13,11 +13,8 @@ const MainRouter = () => (
       <Route path="/login" component={Login} />
       <Route path="/reset-password" component={ResetPassword} />
       <Route path="/confirm-password" component={ConfirmPassword} />
-<<<<<<< HEAD
       <Route path="/profile" component={Profile} />
-=======
       <Route path="/register" component={Register} />
->>>>>>> 113bc04911cf9cc1fb7ecc5b833712bfeeb78951
     </Switch>
   </main>
 );
