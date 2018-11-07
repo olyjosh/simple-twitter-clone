@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "./form";
@@ -32,10 +33,14 @@ class Home extends Component {
               <p className="index5">
                 Join Twitter Today.
                 <br />
-                <button className="button button1">
-                  Sign Up <br />
-                </button>
-                <button className="button button2">Log In</button>
+                <NavLink to="/register">
+                  <button className="button button1">
+                    Sign Up <br />
+                  </button>
+                </NavLink>
+                <NavLink to="/login">
+                  <button className="button button2">Log In</button>
+                </NavLink>
               </p>
             </div>
           </Col>
