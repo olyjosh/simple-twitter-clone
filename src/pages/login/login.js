@@ -1,7 +1,51 @@
 import React, { PureComponent } from "react";
+//import { doPost } from "../../util/network/services";
 class loginComponent extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      email: "",
+      password: ""
+    };
+    this.login = this.login.bind(this);
+    this.updateInput = this.updateInput.bind(this);
+  }
+
+  updateInput(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+  login() {
+    const data = {
+      email: this.state.email,
+      password: this.state.password
+    };
+    fetch("http://timtweet.herokuapp.com/api/auth", {
+      method: "POST",
+      header: {
+        Accept: "application/json",
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({
+        data
+      })
+    })
+      .then(responseJson => {
+        alert(
+          "Status code:" +
+            " " +
+            responseJson.status +
+            "\n" +
+            "Status Message:" +
+            " " +
+            responseJson.statusText
+        );
+      })
+      .catch(error => {
+        alert(error(error));
+      });
   }
   render() {
     return (
@@ -82,8 +126,10 @@ class loginComponent extends PureComponent {
                           <input
                             className="js-username-field email-input js-initial-focus"
                             type="text"
-                            name="username"
-                            placeholder="Phone, email or username"
+                            name="email"
+                            placeholder="Email"
+                            value={this.state.email}
+                            onChange={this.updateInput}
                           />
                         </div>
                         <div className="clearfix field">
@@ -92,13 +138,15 @@ class loginComponent extends PureComponent {
                             type="password"
                             name="password"
                             placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.updateInput}
                           />
                         </div>
                       </fieldset>
 
                       <div className="clearfix">
                         <button
-                          onClick=""
+                          onClick={this.login}
                           className="submit EdgeButton EdgeButton--primary EdgeButtom--medium"
                         >
                           Log in
