@@ -44,7 +44,7 @@ class loginComponent extends PureComponent {
         );
       })
       .catch(error => {
-        alert(error(error));
+        alert(error);
       });
   }
   render() {
